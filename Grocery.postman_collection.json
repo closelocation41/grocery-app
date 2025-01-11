@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "23365156-fbe4-40fb-8a54-c8b0b74c0670",
+		"name": "Grocery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39762158"
+	},
+	"item": [
+		{
+			"name": "add grocery",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImRlZmF1bHRfdXNlciIsImlhdCI6MTczNjU3MTEzMCwiZXhwIjoxNzM2NTc0NzMwfQ.GN2gqy91toyv8BDA5T8cQsiz7GFYuT3J4p6_cq12QoI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"banana\",\r\n  \"price\": \"140\",\r\n  \"stock\": \"30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/admin/groceries",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"groceries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "grocery update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImRlZmF1bHRfdXNlciIsImlhdCI6MTczNjU3MTEzMCwiZXhwIjoxNzM2NTc0NzMwfQ.GN2gqy91toyv8BDA5T8cQsiz7GFYuT3J4p6_cq12QoI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"apple\",\r\n  \"price\": \"140\",\r\n  \"stock\": \"30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/admin/groceries",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"groceries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get grocery",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImRlZmF1bHRfdXNlciIsImlhdCI6MTczNjU3MTEzMCwiZXhwIjoxNzM2NTc0NzMwfQ.GN2gqy91toyv8BDA5T8cQsiz7GFYuT3J4p6_cq12QoI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"price\": \"number\",\r\n  \"stock\": \"number\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/admin/groceries",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"groceries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "grocery Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImRlZmF1bHRfdXNlciIsImlhdCI6MTczNjU3MTEzMCwiZXhwIjoxNzM2NTc0NzMwfQ.GN2gqy91toyv8BDA5T8cQsiz7GFYuT3J4p6_cq12QoI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"price\": \"number\",\r\n  \"stock\": \"number\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/admin/groceries/6781fda9a5900dfed41c5414",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"groceries",
+						"6781fda9a5900dfed41c5414"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
