@@ -52,7 +52,7 @@ The server will run on `http://localhost:3000`.
 ### Utility Route
 | Method | Endpoint          | Description                         |
 |--------|-------------------|-------------------------------------|
-| POST   | `/api/create-token`| Generate a JWT token for testing    |
+| GET   | `/create-token`| Generate a JWT token for testing    |
 
 ## Using `/create-token`
 This endpoint generates a JWT token for a default user. You can use this token for testing authenticated routes.
