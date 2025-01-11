@@ -59,7 +59,7 @@ This endpoint generates a JWT token for a default user. You can use this token f
 
 Example request:
 ```bash
-curl -X POST http://localhost:3000/api/create-token
+curl -X POST http://localhost:3000/create-token
 ```
 
 Example response:
