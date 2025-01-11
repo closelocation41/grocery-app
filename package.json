@@ -1,0 +1,24 @@
+{
+    "name": "grocery-booking-api",
+    "version": "1.0.0",
+    "description": "API for managing grocery bookings",
+    "main": "dist/app.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "node dist/app.js",
+        "dev": "ts-node src/app.ts",
+        "build": "tsc"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^7.5.1"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.17",
+        "@types/jsonwebtoken": "^9.0.7",
+        "@types/node": "^20.6.3",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.2.2"
+    }
+}
