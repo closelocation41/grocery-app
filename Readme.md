@@ -77,8 +77,172 @@ Example response:
 
 2. The API will be available at `http://localhost:3000`.
 
-## Tests
-Add tests using your preferred testing framework (e.g., Jest or Mocha) for the controllers and middleware.
+
+# Grocery API Documentation
+
+This document provides detailed information about the Grocery API, including the endpoints for adding, retrieving, updating, and deleting grocery items. Each section outlines the request format and the expected response.
+
+---
+
+## Endpoints
+
+### 1. Add a Grocery Item
+
+**Endpoint:** `POST /groceries`
+
+**Description:** Adds a new grocery item to the database.
+
+#### Request:
+**Headers:**
+- `Content-Type: application/json`
+
+**Body:**
+```json
+{
+  "name": "string",
+  "price": "number",
+  "stock": "number"
+}
+```
+
+#### Response:
+- **201 Created**:
+  ```json
+  {
+    "_id": "string",
+    "name": "string",
+    "price": "number",
+    "stock": "number",
+    "__v": "number"
+  }
+  ```
+- **500 Internal Server Error**:
+  ```json
+  {
+    "error": "string"
+  }
+  ```
+
+---
+
+### 2. Get All Groceries
+
+**Endpoint:** `GET /groceries`
+
+**Description:** Retrieves all grocery items from the database.
+
+#### Request:
+No request body or parameters are required.
+
+#### Response:
+- **200 OK**:
+  ```json
+  [
+    {
+      "_id": "string",
+      "name": "string",
+      "price": "number",
+      "stock": "number",
+      "__v": "number"
+    }
+  ]
+  ```
+- **500 Internal Server Error**:
+  ```json
+  {
+    "error": "string"
+  }
+  ```
+
+---
+
+### 3. Update a Grocery Item
+
+**Endpoint:** `PUT /groceries/:id`
+
+**Description:** Updates an existing grocery item by its ID.
+
+#### Request:
+**Headers:**
+- `Content-Type: application/json`
+
+**Parameters:**
+- `id` (string): The ID of the grocery item to update.
+
+**Body:**
+```json
+{
+  "name": "string",
+  "price": "number",
+  "stock": "number"
+}
+```
+
+#### Response:
+- **200 OK**:
+  ```json
+  {
+    "_id": "string",
+    "name": "string",
+    "price": "number",
+    "stock": "number",
+    "__v": "number"
+  }
+  ```
+- **404 Not Found**:
+  ```json
+  {
+    "error": "Grocery not found"
+  }
+  ```
+- **500 Internal Server Error**:
+  ```json
+  {
+    "error": "string"
+  }
+  ```
+
+---
+
+### 4. Delete a Grocery Item
+
+**Endpoint:** `DELETE /groceries/:id`
+
+**Description:** Deletes an existing grocery item by its ID.
+
+#### Request:
+**Parameters:**
+- `id` (string): The ID of the grocery item to delete.
+
+#### Response:
+- **200 OK**:
+  ```json
+  {
+    "message": "Grocery deleted successfully"
+  }
+  ```
+- **404 Not Found**:
+  ```json
+  {
+    "error": "Grocery not found"
+  }
+  ```
+- **500 Internal Server Error**:
+  ```json
+  {
+    "error": "string"
+  }
+  ```
+
+---
+
+## Error Handling
+
+All endpoints return appropriate error messages with a status code of `500` in case of unexpected errors. Make sure to handle these errors gracefully on the client side.
+
+---
+
+
 
 ## License
 This project is licensed under the MIT License.
