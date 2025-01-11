@@ -33,10 +33,24 @@ The Grocery Booking API allows administrators to manage grocery items and users 
 
 ### Local Development
 
-#### **1. Clone the repository**
-```bash
-git clone <repository_url>
-cd grocery-booking-api
+# Grocery App API
+
+A Node.js application with JWT authentication for secure API requests.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+  - [/create-token](#create-token)
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
 ```
 
 #### **2. Install dependencies**
